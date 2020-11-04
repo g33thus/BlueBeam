@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Cards\**" />
+    <Compile Remove="CognitiveModels\**" />
+    <Compile Remove="DeploymentTemplates\**" />
+    <Content Remove="Cards\**" />
+    <Content Remove="CognitiveModels\**" />
+    <Content Remove="DeploymentTemplates\**" />
+    <EmbeddedResource Remove="Cards\**" />
+    <EmbeddedResource Remove="CognitiveModels\**" />
+    <EmbeddedResource Remove="DeploymentTemplates\**" />
+    <None Remove="Cards\**" />
+    <None Remove="CognitiveModels\**" />
+    <None Remove="DeploymentTemplates\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BookingDetails.cs" />
+    <Compile Remove="Dialogs\BookingDialog.cs" />
+    <Compile Remove="Dialogs\CancelAndHelpDialog.cs" />
+    <Compile Remove="Dialogs\DateResolverDialog.cs" />
+    <Compile Remove="FlightBookingRecognizer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="2.1.0" />
+    <PackageReference Include="AdaptiveCards.Templating" Version="1.1.0" />
+    <PackageReference Include="Bot.Builder.Community.Dialogs.Prompts" Version="4.9.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.10.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.10.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Azure" Version="4.10.3" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.10.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.10.2" />
+    <PackageReference Include="Microsoft.Recognizers.Text.DataTypes.TimexExpression" Version="1.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
